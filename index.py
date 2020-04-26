@@ -1,9 +1,12 @@
+#! /usr/bin/env python3
+
 import requests as req
 import pandas as pd 
 import time 
 from datetime import datetime, timedelta
 from jinja2 import Environment, FileSystemLoader
 import json
+import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -79,3 +82,10 @@ def mail_server(send_to,send_from,pas,html_msg):
     mail.login(send_from, pas)
     mail.sendmail(send_from, send_to, msg.as_string())
     mail.quit()
+
+sender_email = os.environ['EMAIL']
+your_pass = os.environ['PASS']
+recipient_email = os.environ['REC_EMAIL']
+
+
+mail_server(recipient_email,sender_email,your_pass,output)
