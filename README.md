@@ -14,4 +14,4 @@ As an avid consumer of `hackernews`, I decided to write a simple script that wil
 
 #### END RESULT
 
-![img](https://imgur.com/a/oypyxwI)
+![img](https://imgur.com/a/oypyxwI.jpg)
