@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% for items in json_data %}
+<p> {{items['story_title']}} </p>
+<a href="{{ items['story_link'] }}">link</a> - <a href="{{ items['story_comment'] }}">comment</a>
+{% endfor %}
+</body>
+</html>
